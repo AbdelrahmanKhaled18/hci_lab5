@@ -1,0 +1,17 @@
+<h2>5.1</h2>
+<p>Current value: {{ value }}</p>
+<app-button label="Increment" (buttonClick)="increment()"></app-button>
+<app-button label="Decrement" (buttonClick)="decrement()"></app-button>
+
+<h2>5.2</h2>
+<div style="margin-top: 20px;">
+  <label for="studentName">Student Name:</label>
+  <input type="text" id="studentName" [(ngModel)]="studentName" name="studentName" />
+</div>
+
+<button (click)="submitStudent()">Add Student</button>
+
+<p *ngIf="isSubmitted">Student "{{ studentName }}" submitted successfully!</p>
+
+
+<app-user-form></app-user-form>

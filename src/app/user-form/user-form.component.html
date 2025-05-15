@@ -1,0 +1,26 @@
+<h2>5.3</h2>
+<div class="user-form">
+  <label>
+    First Name:
+    <input type="text" [(ngModel)]="userData.firstName" (ngModelChange)="updateField('firstName', $event)" />
+  </label>
+
+  <label>
+    Second Name:
+    <input type="text" [(ngModel)]="userData.secondName" (ngModelChange)="updateField('secondName', $event)" />
+  </label>
+
+  <label>
+    Display Name:
+    <input type="text" [(ngModel)]="userData.displayName" (ngModelChange)="updateField('displayName', $event)" />
+  </label>
+
+  <button (click)="addUser()"
+    style="margin-top: 1em; background: #4eaaff; color: white; border: none; padding: 0.5em 1em; border-radius: 5px; font-size: 1.1em; cursor: pointer;">Add
+    new Student</button>
+  <div *ngIf="confirmationMessage" style="margin-top: 1em; color: #333; font-size: 1.1em;">
+    {{ confirmationMessage }}
+  </div>
+
+  <pre>{{ userJson }}</pre>
+</div>
